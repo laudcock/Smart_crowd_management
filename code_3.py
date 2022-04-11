@@ -15,7 +15,7 @@ import random #edges vullen met random getallen
 def Telraamcounts(time='live',contents='minimal',area='4.01,50.92,4.07,50.96'):
     #connecting to telraam API
     param = {'time':time,'contents':contents,'area':area}
-    r = requests.post('https://telraam-api.net/v1/reports/traffic_snapshot', headers={'X-Api-Key':'GQY2NW1bdYa6e0kZLHqX5aSA5zg9SdMzaGFUNjhJ'}, json=param)
+    r = requests.post('https://telraam-api.net/v1/reports/traffic_snapshot', headers={'X-Api-Key':'request_your_own'}, json=param)
     if r.status_code == requests.codes.ok:
         telraam = r.json()
     else:
