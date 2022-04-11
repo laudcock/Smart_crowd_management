@@ -66,7 +66,7 @@ map.on('click', function(e) {
 	  
 $.getJSON("ajax/route.php?lat1="+lat1+"&lng1="+lng1+"&lat2="+lat2+"&lng2="+lng2)
     .then(function (data) {
-		document.getElementById('status').innerHTML = "Difference in crowdedness: "+ data.var1 + " pedestrians" + "<br>difference in distance: "+ data.var2 + "m"
+		document.getElementById('status').innerHTML = "Difference in crowdedness: "+ data.var1 + " pedestrians" + "<br>difference in distance: "+ data.var2 + "m<br>Green route = shortest path, red route = least crowded path"
 		ped = 0;
 		l=0;
         res1=L.geoJson(data.lijnen1, 
